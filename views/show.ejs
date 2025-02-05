@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .head{
+            color: brown;
+            margin: 5px;
+            display: flex;
+        }
+        .list{
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div style="border: 2px solid black; height: 200px; width: 200px;">
+        <h3 class="head">Name: <%=find.name%></h3><br>
+        <p class="head">Text: <%=find.text%> </p><br>
+        
+        <form action="/products/<%=find._id%>?_method=DELETE" method="post">
+            <button type="submit" style="margin: 5px;">Delete</button>
+            
+        </form>
+        <a href="/products/<%=find._id%>/edit">Edit</a>
+        
+    </div>
+</body>
+</html>

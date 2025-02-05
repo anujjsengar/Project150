@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .head{
+            color: brown;
+            margin: 5px;
+            display: flex;
+        }
+        .list{
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="/product/new">
+        <button style="cursor: pointer;">New</button>
+    </form>
+
+    <a href="/login">LogIn</a>
+    <a href="/register">SignUp</a>
+
+    <div>
+        <%for(i of item){%>
+            <div >
+            <ul style="margin: 10px;">
+                <li style="list-style: none; border: 2px solid black;" class="list">
+                    <h3 class="head"><%=i.name%></h3>
+                    <h3 class="head"><%=i.text%></h3>
+                    <a href="/products/<%=i._id%>" class="head" style="text-decoration: none;">View</a>
+                </li>
+            </ul>
+            </div>
+        <%}%>
+    </div>
+</body>
+</html>
