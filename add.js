@@ -3,8 +3,8 @@ const App = require('./models/Product');
 
 let item = [
     {
-        name:"Kushal",
-        text:"Hi this is Kushal"
+        name:"HEllo",
+        text:"This is Web Testing",
     }
     
 ];
@@ -12,6 +12,6 @@ let item = [
 
 async function addDB(){
     await App.insertMany(item);
-    console.log("Data Added Successfully");
+    console.log("Note Added Successfully");
 }
 module.exports = addDB;

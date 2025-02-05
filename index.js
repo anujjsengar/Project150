@@ -6,7 +6,7 @@ const ejsMate = require('ejs-mate');
 const addDB = require('./add');
 const productRoute = require('./routes/product');
 const methodOverride = require('method-override');
-mongoose.connect('mongodb://127.0.0.1:27017/TestFirst')
+mongoose.connect('mongodb+srv://anujkumarofficial2004:anujjsengar@aoidev.mum2m.mongodb.net/Users?retryWrites=true&w=majority')
 .then(()=>{
     console.log("DB Connected");
 })
